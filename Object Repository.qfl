@@ -1,0 +1,224 @@
+﻿'Function OfferTC_01
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+Services.StartTransaction"OfferTC_01"
+Wait(2)
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").Link("Offers").Click
+Services.EndTransaction"OfferTC_01"
+OfferString = Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").Link("Offers").Click
+If (OfferString)>=0 Then
+Reporter.ReportEvent micPass, "Offers", "Pass"
+else
+Reporter.ReportEvent micPass, "Offers", "Fail"
+End  If
+'End Function
+
+
+-------------------------------------------------------------------------'OfferTC_02--------------------------------------------------------------------------------------------------
+'Function OfferTC_02
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+'Inline descriptive programming
+'Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+'Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Highlight
+
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+
+Services.StartTransaction"OfferTC_02"
+'Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebEdit("Search for Offers by Name").Highlight
+Services.EndTransaction"OfferTC_02"
+resultString = Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebEdit("Search for Offers by Name").Highlight
+
+If(resultString)>=0 Then
+Reporter.ReportEvent micPass, "Search text field Highlighted", "Pass"
+else
+Reporter.ReportEvent micPass, "Search text field Highlighted", "Fail"
+End  If
+	
+'End Function
+
+-------------------------------------------------------------------------------'OfferTC_03------------------------------------------------------------------------------
+'Function OfferTC_03
+	
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+'Inline descriptive programming
+'Browser("creationtime:=0").page("micclass:=page").Link(xpath:=//DIV[2]/DIV[1]/A[3]").Click
+'Browser("creationtime:=0").page("micclass:=page").WebEdit("searchBoxInput").Highlight
+
+
+
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+
+Services.StartTransaction"OfferTC_03"
+Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Highlight
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Set "ICICI"
+
+Services.EndTransaction"OfferTC_03"
+resultString = Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebEdit("Search for Offers by Name").Set 
+
+If (resultString)>=0    Then
+Reporter.ReportEvent micPass, "ICICI Offers", "Pass"
+Else
+Reporter.ReportEvent micPass, "ICICI Offers", "Fail"
+End If	
+'End Function
+
+
+---------------------------------------------------------------------------------------'OfferTC_04---------------------------------------------------------------------------------------
+'Function OfferTC_04
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+'Inline descriptive programming
+'Browser("creationtime:=0").page("micclass:=page").Link(xpath:=//DIV[2]/DIV[1]/A[3]").Click
+'Browser("creationtime:=0").page("micclass:=page").WebEdit("searchBoxInput").Highlight
+
+
+
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+
+Services.StartTransaction"OfferTC_04"
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Highlight
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Set "ICICI"
+resultString = Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebElement("ICICI Bank Credit Card").Click
+
+
+Services.EndTransaction"OfferTC_04"
+'resultString = Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebElement("ICICI Bank Credit Card").Click
+If (resultString)>=0  Then
+Reporter.ReportEvent micPass, "25% Discount", "Pass"
+else
+Reporter.ReportEvent micPass, "25% Discount", "Fail"
+End If
+'End Function
+
+-----------------------------------------------------------------------------------------'OfferTC_05------------------------------------------------------------------------------------
+'Function OfferTC_05
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+'Inline descriptive programming
+'Browser("creationtime:=0").page("micclass:=page").Link(xpath:=//DIV[2]/DIV[1]/A[3]").Click
+'Browser("creationtime:=0").page("micclass:=page").WebEdit("searchBoxInput").Highlight
+
+
+
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+
+Services.StartTransaction"OfferTC_05"
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement_2").Highlight
+
+Wait(2)
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement_2").Click
+
+
+resultString = Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("About OfferGet 4 movie").Click
+Services.EndTransaction"OfferTC_05"
+'resultString = Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("About OfferGet 4 movie").Click
+If (resultString)>=0  Then
+Reporter.ReportEvent micPass, "Aurum Credit Card Offer", "Pass"
+else
+Reporter.ReportEvent micPass, "Aurum Credit Card Offer", "Fail"
+End if	
+
+'End Function
+
+---------------------------------------------------------------------------------------'OfferTC_06---------------------------------------------------------------------------------------
+'Function OfferTC_06
+SystemUtil.Run "chrome.exe","www.Bookmyshow.in"
+
+'Inline descriptive programming
+'Browser("creationtime:=0").page("micclass:=page").Link(xpath:=//DIV[2]/DIV[1]/A[3]").Click
+'Browser("creationtime:=0").page("micclass:=page").WebEdit("searchBoxInput").Highlight
+
+
+
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+
+Services.StartTransaction"OfferTC_06"
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Click
+Services.EndTransaction	"OfferTC_06"
+resultString = Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Click
+If (resultString)>=0 Then
+Reporter.ReportEvent micPass, "Debit Card Offers", "Pass"
+else
+Reporter.ReportEvent micPass, "Debit Card Offers", "Fail"
+	
+End If
+	
+'End Function
+
+--------------------------------------------------------------------------------------'OfferTC_07---------------------------------------------------------------------
+'Function OfferTC_07
+
+Services.StartTransaction "OfferTC_07"
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").WebElement("WebElement_3").Click
+Wait(2)
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("About OfferGet up to INR").Click	
+Services.EndTransaction "OfferTC_07"
+resultString = Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("About OfferGet up to INR").Click	
+If (resultString)>=0 Then
+Reporter.ReportEvent micPass, "VISA Get 50% Offer", "Pass"
+else
+Reporter.ReportEvent micPass, "VISA Get 50% Offer", "Fail"
+End  If
+'End Function
+
+--------------------------------------------------------------------------------'OfferTC_08-------------------------------------------------------------------------------
+'Function OfferTC_08
+
+Services.StartTransaction"OfferTC_08"
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").WebElement("WebElement").Click
+Services.EndTransaction"OfferTC_08"
+resultString = Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").WebElement("WebElement").Click
+If (resultString)>=0 Then
+Reporter.ReportEvent micPass, "Bookmyshow Offer", "Pass"
+else
+Reporter.ReportEvent micPass, "Bookmyshow Offer", "Fail"
+End If
+
+'End Function
+-------------------------------------------------------------------------------------'OfferTC_09--------------------------------------------------------------------------------
+'Function OfferTC_09
+	
+SystemUtil.Run"chrome.exe","www.bookmyshow.in"
+
+Services.StartTransaction "OfferTC_09"
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").Link("Offers").Click
+Wait(2)
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement_3").Click
+Wait(2)
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").Link("About OfferGet ₹ 50 off").Click
+resultString = Browser("Movie Tickets, Plays,").Page("Get ₹ 50 off at Cineluv").Link("BOOK NOW").Click
+Services.EndTransaction "OfferTC_09"
+'resultString = Browser("Movie Tickets, Plays,").Page("Get ₹ 50 off at Cineluv").Link("BOOK NOW").Click
+If (resultString)>=0  Then
+Reporter.ReportEvent micPass, "Enjoy movies and discount's", "Pass"
+else
+Reporter.ReportEvent micPass, "Enjoy movies and discount's", "Fail"
+End If
+	
+'End Function
+
+
