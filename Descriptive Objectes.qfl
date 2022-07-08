@@ -1,0 +1,131 @@
+﻿OfferTC_01
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set PageObject = Description.Create
+PageObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+
+OfferTC_02
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject  =Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser  ("browserObject").Page ("PageObject").WebEdit("html tag:=INPUT").Click
+
+OfferTC_03
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser  ("browserObject").Page ("PageObject").WebEdit("html tag:=INPUT").Set "ICICI
+
+OfferTC_04
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//A[1]/DIV[1]/DIV[1]/P[1]"
+Set searchBoxInput = Description.Create
+searchBoxInput("html tag").Value = "INPUT"
+Set ICICIObject = Description.Create
+ICICIObject("Innerhtml").Value = "ICICI Bank Credit Card 25% Discount Offer"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser  ("browserObject").Page ("PageObject").WebEdit("html tag:=INPUT").Set "ICICI"  
+Browser  ("browserObject").Page ("PageObject").WebElement("Innerhtml:= ICICI Bank Credit Card 25% Discount Offer").Click
+
+OfferTC_05
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set CreditObject = Description.Create
+CreditObject("html tag").Value = "svg"
+Set AurumObject Description.Create
+AurumObject("html tag").Value = "DIV"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser ("browserObject").Page ("PageObject").WebElement("html tag:= svg").Click
+Browser ("browserObject").Page ("PageObject").WebElement("html tag:=DIV ").Click
+
+OfferTC_06
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set DebitObject = Description.Create
+DebitObject("Innertext").Value = "MoviesStreamNEWEventsPlaysSportsActivitiesBuzz"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser ("browserObject").Page ("PageObject").WebElement("Innertext:= MoviesStreamNEWEventsPlaysSportsActivitiesBuzz").Click
+
+
+
+OfferTC_07
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set DebitObject = Description.Create
+DebitObject("Innertext").Value = "MoviesStreamNEWEventsPlaysSportsActivitiesBuzz"
+SetVisaObject = Description.Create
+VisaObject"Innerhtml").Value = "Get up to INR 300 off on movies with VISA Signature Cards"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser ("browserObject").Page ("PageObject").WebElement("html tag:= SPAN").Click
+Browser ("browserObject").Page ("PageObject").WebElement("Innerhtml:= Get up to INR 300 off on movies with VISA Signature Cards").Click
+
+
+
+OfferTC_08
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set BookmyshowObject = Description.Create
+BookmyshowObject("html tag").Value = "SPAN"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser ("browserObject").Page ("PageObject").WebElement("html:= SPAN").Click
+
+
+OfferTC_09
+Dim resultString
+Set browserObject = Description.Create
+browserObject("creationtime").Value = "0"
+Set browserObject = Description.Create
+browserObject("micclass").Value = "page"
+Set OfferObject = Description.Create
+OfferObject("xpath").Value = "//DIV[2]/DIV[1]/A[3]"
+Set BookmyshowObject = Description.Create
+BookmyshowObject("html tag").Value = "SPAN"
+Set DiscountObject = Description.Create
+DiscountObject("Innerhtml").Value = "Get ₹ 50 off at Cineluv Kalpana Cinema"
+Set BookObject = Description.Create
+BookObject("Innerhtml").Value = "BOOK NOW"
+Browser ("browserObject").Page ("PageObject").Link("xpath:= //DIV[2]/DIV[1]/A[3]").Click
+Browser ("browserObject").Page ("PageObject").WebElement("html:= SPAN").Click
+Browser ("browserObject").Page ("PageObject").WebElement("Innerhtml:=Get ₹ 50 off at Cineluv Kalpana Cinema").Click
+Browser ("browserObject").Page ("PageObject").Link("Innerhtml:= BOOK NOW").Click

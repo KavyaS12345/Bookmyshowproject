@@ -1,0 +1,58 @@
+﻿Function execute Test(testCaseID)
+Select Case testCaseID
+	Case "OfferTC_01"
+	     Services.StartTransaction "OfferTC_01"
+	             Environment.Value("Result") = OfferTC_01()
+	     
+	     Services.EndTransaction "OfferTC_01"
+	     
+	 Case "OfferTC_02"
+	     Services.StartTransaction "OfferTC_02"
+	              Environment.Value("Result") = OfferTC_02()
+	     
+	     Services.EndTransaction "OfferTC_02"
+	     
+	  Case "OfferTC_03"
+	      Services.StartTransaction "OfferTC_03"
+	                Environment.Value("Result") = OfferTC_03()
+	     
+	      Services.EndTransaction "OfferTC_03"
+	     
+	    Case "OfferTC_04"
+	        Services.StartTransaction "OfferTC_04"
+	                Environment.Value("Result") = OfferTC_04()
+	     
+	        Services.EndTransaction "OfferTC_04"
+	     
+	    Case "OfferTC_05"
+	       Services.StartTransaction "OfferTC_05"
+	                Environment.Value("Result") = OfferTC_05()
+	     
+	        Services.EndTransaction "OfferTC_05"
+	     
+	     Case "OfferTC_06"
+	         Services.StartTransaction "OfferTC_06"
+	                Environment.Value("Result") = OfferTC_06()
+	     
+	         Services.EndTransaction "OfferTC_06"
+	     
+	     
+	      Case "OfferTC_07"
+	         Services.StartTransaction "OfferTC_07"
+	                Environment.Value("Result") = OfferTC_07()
+	     
+	         Services.EndTransaction "OfferTC_07"
+	     
+	     Case "OfferTC_08"
+	         Services.StartTransaction "OfferTC_08"
+	                Environment.Value("Result") = OfferTC_08()
+	     
+	        Services.EndTransaction "OfferTC_08"
+	     
+	     Case "OfferTC_09"
+	         Services.StartTransaction "OfferTC_09"
+	                Environment.Value("Result") = OfferTC_09()
+	     
+	        Services.EndTransaction "OfferTC_09"
+End Select
+End Function

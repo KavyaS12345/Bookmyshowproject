@@ -1,0 +1,91 @@
+﻿Function OfferTC_01
+Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+
+End Function
+
+Function OfferTC_02
+Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Highlight
+End Function
+
+Function OfferTC_03
+Dim ActualResult, ExpectedResult
+Browser("Movie Ticket Offers -").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Highlight
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Set "ICICI"
+End  Function
+
+Function Offer_04
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Highlight
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebEdit("Search for Offers by Name").Set "ICICI"
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,_2").WebElement("ICICI Bank Credit Card").Click
+End Function
+
+Function Offer_05
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement_2").Highlight
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement_2").Click
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("About OfferGet 4 movie").Click
+End Function
+
+Function Offer_06
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Click
+End Function
+
+Function Offer_07
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").WebElement("WebElement_3").Click
+Browser("Movie Tickets, Plays,_2").Page("Movie Tickets, Plays,").Link("About OfferGet up to INR").Click
+
+End Function
+
+Function Offer_08
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").Link("Offers").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,_2").WebElement("WebElement").Click
+End Function
+
+Function Offer_09
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Highlight
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("Get ₹ 50 off at Cineluv").Highlight
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("Get ₹ 50 off at Cineluv").Click
+Browser("Movie Tickets, Plays,").Page("Get ₹ 50 off at Cineluv").Link("BOOK NOW").Click		
+End Function
+
+Function Offer_10
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement").Highlight
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement").Click		
+End Function
+
+Function Offer_11
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement").Highlight
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement").Click	
+End Function
+
+Function Offer_12
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("WebElement").Click
+Browser("Movie Tickets, Plays,").Page("Movie Tickets, Plays,").WebElement("Get 10X Reward points").Click
+End Function
+
+Function Offer_13
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("Movie Ticket Offers -").Page("Movie Ticket Offers -").WebElement("WebElement").Click	
+End Function
+
+Function Offer_14
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Highlight
+Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Set "SBI"	
+End Function
+
+Function OfferTC_15
+Browser("creationtime:=0").page("micclass:=page").Link("xpath:=//DIV[2]/DIV[1]/A[3]").Click
+Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Highlight
+Browser("creationtime:=0").page("micclass:=page").WebEdit("html tag:=INPUT").Set "HSBC"
+End Function
